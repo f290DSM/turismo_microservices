@@ -1,4 +1,4 @@
-package br.com.fatecararas.api.core.attraction.category;
+package br.com.fatecararas.api.core.touristspot.category;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.List;
 
 public interface CategoryService {
-    @GetMapping("/categorias/info-categorias")
+    @GetMapping("/category/all")
     @ResponseStatus(HttpStatus.OK)
-    List<CategoryDTO> findAllCategoryOnly();
+    List<CategoryDTO> findAll();
 
-    @PostMapping
+    @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
     CategoryDTO save(@RequestBody @Valid CategoryDTO dto);
 }

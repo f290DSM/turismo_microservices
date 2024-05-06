@@ -1,0 +1,26 @@
+server:
+  port: 9001
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: routes
+  datasource:
+    username: root
+    password: segredo
+    url: jdbc:mysql://localhost:3306/routes-db?createDatabaseIfNotExist=true
+    hikari:
+      connection-timeout: 60000
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    root: info
+    br.com.fatecararas: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+# //TODO: Docker profile
