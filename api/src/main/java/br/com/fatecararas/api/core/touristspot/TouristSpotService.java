@@ -11,9 +11,6 @@ public interface TouristSpotService {
     @GetMapping("/category/{id}")
     List<TouristSpotDTO> findByCategoryId(@PathVariable("id") Integer id);
 
-    @GetMapping("/route/{id}")
-    List<TouristSpotDTO> findByRouteId(@PathVariable("id") Integer id);
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     TouristSpotDTO save(@RequestBody @Valid TouristSpotDTO dto);

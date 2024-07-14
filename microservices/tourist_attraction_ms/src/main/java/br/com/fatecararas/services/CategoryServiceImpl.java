@@ -30,4 +30,19 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryDTO save(CategoryDTO dto) {
         return category;
     }
+
+    @Override
+    public CategoryDTO findById(Integer id) {
+        return null;
+    }
+
+    @Override
+    public CategoryDTO update(Integer id, CategoryDTO dto) {
+        return null;
+    }
+
+    @Override
+    public void delete(Integer id) {
+
+    }
 }

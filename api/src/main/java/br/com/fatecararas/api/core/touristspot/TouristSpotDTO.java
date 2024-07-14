@@ -1,6 +1,7 @@
 package br.com.fatecararas.api.core.touristspot;
 
 import br.com.fatecararas.api.core.touristspot.category.CategoryDTO;
+import br.com.fatecararas.api.core.touristspot.image.TouristSpotImageDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -45,4 +46,6 @@ public class TouristSpotDTO {
     private String setor;
 
     private List<CategoryDTO> categorias;
+
+    private List<TouristSpotImageDTO> imagemList;
 }
